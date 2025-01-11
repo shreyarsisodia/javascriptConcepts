@@ -2,15 +2,18 @@
 
 fetch('https://api.example.com/data')
   .then(response => {
+
     // Instead of returning a promise, we return a direct value
     return response.json(); // This returns a promise
   })
   .then(data => {
+
     // This 'data' is the resolved value from the previous handler
     console.log(data);
     return "Processing complete"; // Returning a string value
   })
   .then(result => {
+
     // 'result' receives the string value from the previous handler
     console.log(result); // Outputs: Processing complete
   })
