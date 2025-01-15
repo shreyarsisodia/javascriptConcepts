@@ -1,0 +1,14 @@
+#fetching data using promise points to be noted
+
+useEffect(()=>{
+fetch("https://jsonplaceholder.typicode.com/comments").then((data)=>{
+
+//always return the data .then  because .then is only chainable if it returns some data
+return data.json()
+
+}).then((result)=>{
+
+setData(result)
+
+console.log(result)})
+},[])
